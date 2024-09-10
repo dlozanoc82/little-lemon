@@ -166,7 +166,6 @@ ul li a {
 }
 
 p {
-  color: white;
   font-size: 1.6rem;
   margin: 1.6rem 0;
 }
@@ -235,8 +234,173 @@ p {
 }
 
 
-/* FOOTER */
+/* MENU SECTION */
+.specials{
+  height: 100%;
+  padding: 4rem 0;
+  max-width: 104rem;
+  margin: 0 auto;
+}
 
+.header-container{
+  display: grid;
+  align-items: center;
+  grid-column-gap: 3.2rem;
+  grid-template: info image;
+  grid-template-columns: 85fr 15fr;
+  margin-bottom: 3.2rem;
+}
+
+.header-list{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.specials-title{
+  font-size: 3.6rem;
+  line-height: 1.6rem;
+}
+
+
+@media screen and (max-width: 767px) {
+  .specials {
+    height: 100%;
+    padding: 4rem 0;
+    max-width: 104rem;
+    margin: 0 auto;
+  }
+
+  .header-container {
+    display: grid;
+    align-items: center;
+    grid-column-gap: 3.2rem;
+    grid-template: "info image";
+    grid-template-columns: 85fr 15fr;
+    margin-bottom: 3.2rem;
+    padding: 0 1.6rem;
+  }
+
+  .header-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .specials-title {
+    line-height: 1rem;
+  }
+}
+ /* -- FOOD CARD -- */
+.food-card {
+  background: #edefee;
+  border-radius: 16px;
+  height: 100%;
+  min-height: 43.2rem;
+  width: 28.8rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.food-card-image {
+  width: 100%;
+}
+
+.food-card-image > img{
+  height: 20rem;
+}
+
+.food-title {
+  font-size: 2.4rem;
+  font-weight: 600;
+  margin: 0;
+  color: black;
+}
+
+.food-price {
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 0;
+  color: #ee9972;
+}
+
+.food-card-description {
+  font-size: 1.6rem;
+  font-weight: 400;
+  margin: 0;
+  color: #495E57;
+}
+
+.food-card-body {
+  padding: 2.4rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.food-card-header {
+  flex-grow: 1;
+}
+
+.food-card-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 1rem;
+}
+
+.food-card-delivery {
+  display: flex;
+  justify-content: flex-start;
+  align-content: flex-end;
+  margin-top: 1rem;
+}
+
+.food-delivery-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 0.5rem 0 0 ;
+  color: black;
+}
+
+
+@media screen and (max-width: 767px) {
+  .food-card {
+    background: #edefee;
+    border-radius: 1.6rem;
+    height: 100%;
+    min-height: 43.2rem;
+    width: 28.8rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.6rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* FOOTER */
 .footer {
   background: #495e57;
   height: 100%;
