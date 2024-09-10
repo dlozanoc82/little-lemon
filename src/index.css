@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital@0;1&family=Markazi+Text:wght@500&display=swap');
+
+:root {
+    /* Colores */
+    --primary-color-green: #495e57;
+    --primary-color-yellow: #f4ce14;
+    --secondary-color: #ee9972;
+    --secondary-color: #fbdabb;
+    --ligth-color: #edefee;
+    --dark-color: #333;
+
+    /* Tipografía */
+    --font-markazi: "Markazi Text", serif;
+    --font-karla: "Karla", sans-serif;
+    --font-size-base: 1.6rem; /* 16px */
+    --font-size-small: 1.2rem; /* 12px */
+    --font-size-large: 2.4rem; /* 24px */
+
+    --spacing-small: 0.8rem; /* 8px */
+    --spacing-medium: 1.6rem; /* 16px */
+    --spacing-large: 2.4rem; /* 24px */
+  }
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+    font-size: 62.5%; /* 62.5% de 16px = 10px */
+}
+
+body{
+    font-family: var(--font-markazi);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-markazi);
+}
+
+p{
+  font-family: var(--font-karla);
+}
+
+li{
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+  font-family: var(--font-karla);
+}
+
+/* HEADER */
+.topbar{
+  align-items: center;
+  background-color: #fff;
+  display: flex;
+  height: 6.4rem;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 104rem;
+  padding: 1.6rem;
+}
+
+.logo {
+  height: 50px;
+}
+
+.nav, ul {
+  display: flex;
+}
+
+
+ul li {
+  margin-left: 1.6rem;
+  color: inherit;
+}
+
+ul li a {
+  margin-left: 1.6rem;
+  color: black;
+  text-decoration: none;
+  font-family: Karla;
+  font-size: 1.6rem;
+}
+
+@media screen and (max-width: 767px) {
+  .topbar {
+    justify-content: space-between;
+    background-color: white;
+    padding: 1.6rem 1.6rem;
+    display: flex;
+    align-items: center;
+    height: 6.4rem;
+    width: -webkit-fill-available;
+    margin: 0 auto;
+    position: fixed;
+    margin-bottom: 96px;
+  }
+  .menu-toggle {
+    display: block;
+  }
+
+  .menu-list {
+    position: fixed;
+    top: 6.4rem;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    padding: 1.6rem;
+    display: none;
+  }
+
+  .nav.open .menu-list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .menu-toggle {
+    display: block;
+    cursor: pointer;
+  }
+
+  ul li a {
+    margin-left: 1.6rem;
+    color: #495e57;
+    text-decoration: none;
+    font-family: Karla;
+    font-size: 1.6rem;
+  }
+}
+
+
+/* HERO SECTION */
+.hero-background {
+  background: #495e57;
+  height: 100%;
+  display: flex;
+}
+
+.hero {
+  height: 100%;
+  padding: 3.2rem 0;
+  display: grid;
+  align-items: center;
+  grid-column-gap: 3.2rem;
+  grid-template: "info image";
+  grid-template-columns: 60fr 40fr;
+  max-width: 104rem;
+  margin: 0 auto;
+}
+
+.title {
+  color: #f4ce14;
+  font-size: 5.6rem;
+  line-height: 0.8rem;
+}
+
+.subtitle {
+  margin: 2.6rem 0;
+  color: white;
+  font-size: 3.2rem;
+}
+
+p {
+  color: white;
+  font-size: 1.6rem;
+  margin: 1.6rem 0;
+}
+
+.image {
+  grid-area: image;
+  width: 100%;
+  height: 32rem;
+  justify-self: end;
+  border-radius: 1.6rem;
+  object-fit: cover;
+}
+
+.info {
+  grid-area: info;
+}
+
+@media screen and (max-width: 767px) {
+  .hero-background {
+    background: #495e57;
+    height: 100%;
+    display: flex;
+  }
+
+  .hero {
+    height: 100%;
+    padding: 3.2rem 1.6rem;
+    display: grid;
+    align-items: center;
+    grid-column-gap: 3.2rem;
+    grid-template: "info " "image";
+    grid-template-columns: 1fr;
+    max-width: 104rem;
+    margin: 0 auto;
+    margin-top: 96px;
+  }
+
+  .title {
+    color: #f4ce14;
+    font-size: 5.2rem;
+    line-height: 0.8rem;
+  }
+
+  .subtitle {
+    color: white;
+    font-size: 3.6rem;
+  }
+
+  p {
+    color: white;
+  }
+
+  .image {
+    grid-area: image;
+    width: 100%;
+    height: 16rem;
+    justify-self: middle;
+    border-radius: 16px;
+    object-fit: cover;
+    margin-top: 1rem;
+  }
+
+  .info {
+    grid-area: info;
+  }
+}

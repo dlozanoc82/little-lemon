@@ -1,14 +1,8 @@
-import Footer from "./components/Footer"
-import Header from "./components/Header"
-import Main from "./components/Main"
+import Template from "./template/Template"
 
 function App() {
   return (
-    <>
-      <Header />
-      <Main />
-      <Footer />
-    </>
+    <Template />
   )
 }
 
