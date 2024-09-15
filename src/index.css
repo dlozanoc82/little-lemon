@@ -4,8 +4,8 @@
     /* Colores */
     --primary-color-green: #495e57;
     --primary-color-yellow: #f4ce14;
-    --secondary-color: #ee9972;
-    --secondary-color: #fbdabb;
+    --secondary-color-1: #ee9972;
+    --secondary-color-2: #fbdabb;
     --ligth-color: #edefee;
     --dark-color: #333;
 
@@ -51,6 +51,25 @@ li{
 a{
   text-decoration: none;
   font-family: var(--font-karla);
+}
+
+.button {
+  background: var(--primary-color-yellow);
+  padding: 0.8rem 1.6rem;
+  border-radius: 0.8rem;
+  background-color: var(--primary-color-yellow);
+  color: #495e57;
+  font-weight: bold;
+  border: 0.3rem solid var(--primary-color-yellow);
+  font-size: 1.6rem;
+  cursor: pointer;
+  transition: ease-in-out .3s;
+}
+
+.button:hover {
+  background-color: var(--primary-color-green);
+  color: white;
+
 }
 
 /* HEADER */
@@ -126,7 +145,7 @@ ul li a {
 
   ul li a {
     margin-left: 1.6rem;
-    color: #495e57;
+    color: var(--primary-color-green);
     text-decoration: none;
     font-family: Karla;
     font-size: 1.6rem;
@@ -136,7 +155,7 @@ ul li a {
 
 /* HERO SECTION */
 .hero-background {
-  background: #495e57;
+  background: var(--primary-color-green);
   height: 100%;
   display: flex;
 }
@@ -154,7 +173,7 @@ ul li a {
 }
 
 .title {
-  color: #f4ce14;
+  color: var(--primary-color-yellow);
   font-size: 5.6rem;
   line-height: 0.8rem;
 }
@@ -185,7 +204,7 @@ p {
 
 @media screen and (max-width: 767px) {
   .hero-background {
-    background: #495e57;
+    background: var(--primary-color-green);
     height: 100%;
     display: flex;
   }
@@ -204,7 +223,7 @@ p {
   }
 
   .title {
-    color: #f4ce14;
+    color: var(--primary-color-yellow);
     font-size: 5.2rem;
     line-height: 0.8rem;
   }
@@ -294,7 +313,7 @@ p {
 }
  /* -- FOOD CARD -- */
 .food-card {
-  background: #edefee;
+  background: var(--ligth-color);
   border-radius: 16px;
   height: 100%;
   min-height: 43.2rem;
@@ -323,14 +342,14 @@ p {
   font-size: 2rem;
   font-weight: 600;
   margin: 0;
-  color: #ee9972;
+  color: var(--secondary-color-1);
 }
 
 .food-card-description {
   font-size: 1.6rem;
   font-weight: 400;
   margin: 0;
-  color: #495E57;
+  color: var(--primary-color-green);
 }
 
 .food-card-body {
@@ -368,7 +387,7 @@ p {
 
 @media screen and (max-width: 767px) {
   .food-card {
-    background: #edefee;
+    background: var(--ligth-color) ;
     border-radius: 1.6rem;
     height: 100%;
     min-height: 43.2rem;
@@ -387,7 +406,7 @@ p {
 
 /* TESTIMONIAL SECTION */
 .testimonial-background {
-  background: #495e57;
+  background: var(--primary-color-green);
 }
 
 .testimonials {
@@ -588,7 +607,7 @@ p {
 
 /* FOOTER */
 .footer {
-  background: #495e57;
+  background: var(--primary-color-green);
   height: 100%;
   width: 100%;
 }
@@ -648,13 +667,13 @@ p {
     color: white;
   }
   100% {
-    color: #f4ce14;
+    color: var(--primary-color-yellow);
   }
 }
 
 @media screen and (max-width: 767px) {
   .footer {
-    background: #495e57;
+    background: var(--primary-color-green);
     height: 100%;
     width: 100%;
   }
@@ -716,7 +735,201 @@ p {
       color: white;
     }
     100% {
-      color: #f4ce14;
+      color: var(--primary-color-yellow);
     }
+  }
+}
+
+
+
+/* RESERVATION SECTION  */
+.reservation {
+  height: calc(100vh - 96px - 266px);
+  width: 100vw;
+  max-width: 104rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.reservation-card {
+  background: var(--primary-color-green);
+  border-radius: 1.6rem;
+  padding: 3.2rem;
+  width: 50%;
+}
+
+.reservation-title {
+  font-size: 6.4rem;
+  font-weight: 600;
+  margin-bottom: 3.2rem;
+  background: var(--primary-color-green);
+  color: #fff;
+  margin-top: 0;
+  display: flex;
+  justify-content: center;
+}
+@media screen and (max-width: 767px) {
+  .reservation {
+    height: calc(100vh - 96px);
+    width: 100vw;
+    max-width: 104rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .reservation-card {
+    background: var(--primary-color-green);
+    border-radius: 1.6rem;
+    padding: 3.2rem;
+    width: 80%;
+  }
+
+  .reservation-title {
+    font-size: 6.4rem;
+    font-weight: 600;
+    margin-bottom: 3.2rem;
+    background: var(--primary-color-green);
+    color: #fff;
+    margin-top: 0;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+
+/* BOOKING FORM */
+.reservation-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.6rem;
+}
+
+.containter-item-title {
+  color: #fff;
+  font-size: 3.2rem;
+  text-align: center;
+}
+
+.reservation-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+input,
+select {
+  height: 4rem;
+  padding-inline-end: 1.6rem;
+  padding-inline-start: 1.6rem;
+  outline: none;
+  border: 0.1rem solid #e0e0e0;
+  border-radius: 0.6rem;
+  background: #ffffff;
+  color: var(--primary-color-green);
+  cursor: pointer;
+  transition: border-color 0.3s;
+}
+
+input:focus,
+select:focus {
+  border-width: 0.2rem;
+  border-color: var(--primary-color-green);
+}
+
+.error {
+  border: 1px solid red !important;
+}
+
+
+
+/* POPUP CSS */
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+  background-color: #fff;
+  padding: 2rem;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  max-width: 50%;
+  border-radius: 1.6rem;
+}
+
+.popup-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 998;
+}
+
+.popup-description {
+  color: var(--primary-color-green);
+}
+
+.popup-title {
+  color: var(--primary-color-green);
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.popup-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 767px) {
+  .popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    background-color: #fff;
+    padding: 2rem;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    max-width: 50%;
+    border-radius: 1.6rem;
+    width: 100%;
+  }
+
+  .popup-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 998;
+  }
+
+  .popup-description {
+    color: var(--primary-color-green);
+  }
+
+  .popup-title {
+    color: var(--primary-color-green);
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  .popup-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }

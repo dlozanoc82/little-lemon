@@ -1,10 +1,11 @@
 import React from 'react'
+import Reservations from '../components/Reservations/Reservations'
 
 const Booking = () => {
   return (
-    <div>
-      Hola desde Booking
-    </div>
+    <>
+      <Reservations />
+    </>
   )
 }
 
