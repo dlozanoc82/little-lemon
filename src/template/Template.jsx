@@ -14,6 +14,7 @@ const Template = () => {
       <Routes>
         <Route path="/" element={ <Home /> } />
         <Route path="/reservations" element={<Booking />} />
+        <Route path="*" element={ <Home />} />
       </Routes>
       <Footer />
     </div>
